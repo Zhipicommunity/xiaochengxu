@@ -68,12 +68,12 @@ WSGI_APPLICATION = 'wxcloudrun.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':"MYSQL_DATABASE",
-        'USER': "MYSQL_USERNAME",
-        'HOST':10.13.104.75,
-        'PORT': 3306,
+        'NAME':"django_demo",
+        'USER': "tool",
+        'HOST':sh-cynosdbmysql-grp-3fvy2w4a.sql.tencentcdb.com,
+        'PORT': 20225,
         'PASSWORD': 6tQdCZgKR86jURz,
-        'OPTIONS': {'charset': 'utf8mb4'},
+        'OPTIONS': {'charset': 'utf8'},
     }
 }
 
