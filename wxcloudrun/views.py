@@ -4,6 +4,14 @@ from .models import Pet
 from .serializers import PetSerializer
 from django.views import View
 
+def index(request, _):
+    """
+    获取主页
+     `` request `` 请求对象
+    """
+
+    return render(request, 'index.html')
+
 class UserLoginView(View):
     def user_login(request):
         if request.method == 'POST':
