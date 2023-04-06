@@ -1,0 +1,12 @@
+{% if user.is_authenticated %}
+    <!-- 用户已登录的情况下 -->
+    <p>Welcome, {{ user.username }}</p>
+{% else %}
+    <!-- 用户未登录的情况下 -->
+    <form action="{% url 'user_login' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <button type="submit">Login</button>
+    </form>
+{% endif %}
