@@ -7,4 +7,5 @@ urlpatterns = [
     path('login/', UserLoginView.as_view(), name='user_login'),
     re_path(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
     # 其他 URL 路由
+    url(r'(/)?$', views.index)
 ]
